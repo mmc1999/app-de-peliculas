@@ -31,7 +31,7 @@ export default function Home({res}) {
 //- The data comes from a headless CMS.
 //- The data can be publicly cached (not user-specific).
 //- The page must be pre-rendered (for SEO) and be very fast — getStaticProps generates HTML and JSON files, both of which can be cached by a CDN for performance.
-/*export const getStaticProps = async (ctx) => {
+export const getStaticProps = async (ctx) => {
   const data  = await fetch("https://api.themoviedb.org/3/search/movie?api_key=c79fbac57c4206c43850219a56a537f8&language=en-US&query=titanic&page=1&include_adult=false")
   const res = await data.json();
 
@@ -40,4 +40,4 @@ export default function Home({res}) {
       res
     }
   }
-}*/
+}
