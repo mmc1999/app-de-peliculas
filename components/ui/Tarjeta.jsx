@@ -7,14 +7,14 @@ const Tarjeta = ({el}) => {
   return (
       <Card > 
         <CardActionArea>
-            {<CardMedia
+            {/*<CardMedia
               component="img"
               alt={el.title}
               height="140"
               width={140}
               image={`https://image.tmdb.org/t/p/w500/${el.backdrop_path}`}
-            />}
-            <Typography variant="body1">{el.title}</Typography>
+            />
+  <Typography variant="body1">{el.title}</Typography>*/}
         </CardActionArea>
       </Card>
     
