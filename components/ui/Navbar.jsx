@@ -8,7 +8,7 @@ import BookmarkIcon from '@mui/icons-material/Bookmark';
 
 const Navbar = () => {
   return (
-    <AppBar position="sticky" color="primary" elevation={0}>
+    <AppBar position="sticky" color="primary" elevation={0} sx={{padding:"5px 3px"}}>
       <Toolbar sx={{display:"flex", justifyContent:"space-between", alignItems:"center",width:"100%"}}>
           <Grid container spacing={0} >
               <Grid item xs={1} sx={{marginTop:0.4}}>

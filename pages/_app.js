@@ -1,14 +1,17 @@
 import { CssBaseline, ThemeProvider } from '@mui/material'
 import { theme } from '../theme/Theme'
 import '../styles/globals.css'
+import { ContextFavoritoProvider } from '../context/favoritos'
 
 
 function MyApp({ Component, pageProps }) {
   return( 
-    <ThemeProvider theme={theme}>
-      <CssBaseline />
-      <Component {...pageProps} />
-    </ThemeProvider>
+    <ContextFavoritoProvider>
+      <ThemeProvider theme={theme}>
+        <CssBaseline />
+        <Component {...pageProps} />
+      </ThemeProvider>
+    </ContextFavoritoProvider>
   )
 }
 
