@@ -1,4 +1,4 @@
-import { AppBar, Avatar, Box, Grid, IconButton, List, ListItem, Toolbar } from '@mui/material'
+import { AppBar, Avatar, Box, Grid, IconButton, Link, List, ListItem, Toolbar } from '@mui/material'
 import React from 'react'
 import MovieIcon from '@mui/icons-material/Movie';
 import WidgetsIcon from '@mui/icons-material/Widgets';
@@ -19,24 +19,32 @@ const Navbar = () => {
               <Grid item xs={9}>
                     <List sx={{display:"flex", flexDirection:"row", alignItems:"center", justifyContent:"center"}}>
                         <ListItem>
-                            <IconButton >
-                                <WidgetsIcon color="disabled" />
-                            </IconButton>
+                                <Link variant='button' href="/">
+                                    <IconButton >
+                                        <WidgetsIcon color="disabled" />
+                                    </IconButton>
+                                </Link>
                         </ListItem>
                         <ListItem>
-                            <IconButton>
-                                <LocalMoviesIcon color="disabled" />
-                            </IconButton>
+                            <Link variant="button" href="/movie"> 
+                                <IconButton>
+                                    <LocalMoviesIcon color="disabled" />
+                                </IconButton>
+                            </Link>
                         </ListItem>
                         <ListItem>
-                            <IconButton>
-                                <TvIcon color="disabled"/>
-                            </IconButton>
+                            <Link variant='button'>
+                                <IconButton>
+                                    <TvIcon color="disabled"/>
+                                </IconButton>
+                            </Link>
                         </ListItem>
                         <ListItem>
-                            <IconButton>
-                                <BookmarkIcon color="disabled" />
-                            </IconButton>
+                            <Link variant='button'>
+                                <IconButton>
+                                    <BookmarkIcon color="disabled" />
+                                </IconButton>
+                            </Link>
                         </ListItem>
                     </List>
               </Grid>

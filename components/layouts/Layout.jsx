@@ -6,17 +6,16 @@ import Buscador from '../ui/Buscador'
 
 const Layout = ({title="OpenJira - App", children}) => {
   return (
-    <Box sx={{ flexGrow:1,  }} >
+    <>
         <Head>
             <title>{title}</title>
         </Head>
         <Navbar />
         <Buscador />
-          <Box sx={{padding:2}} >
-              {children}
-          </Box>
-        
-    </Box>
+        <main style={{padding:"16px"}} >
+          {children}
+        </main>
+    </>
   )
 }
 

@@ -9,9 +9,9 @@ import favoritoContext from '../../context/favoritos';
 const Tarjeta = ({el}) => {
   if(typeof window === "undefined") return false
   const {
-    existeEnFavorites, toggleFavorite
+    existeEnFavorites, toggleFavorite, favorito
   } = useContext(favoritoContext);
-  
+  console.log(favorito)
   return (
       <Card sx={{position:"relative"}} > 
         <CardActions sx={{position:"absolute", zIndex:10, top:5, right:15, backgroundColor:"rgba(0,0,0,0.5)", borderRadius:50}}>
