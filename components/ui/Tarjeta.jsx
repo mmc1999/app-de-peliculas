@@ -9,7 +9,9 @@ import favoritoContext from '../../context/favoritos';
 const Tarjeta = ({el}) => {
   if(typeof window === "undefined") return false
   const {
-    existeEnFavorites, toggleFavorite, favorito
+    existeEnFavorites,
+    toggleFavorite, 
+    favorito
   } = useContext(favoritoContext);
   console.log(favorito)
   return (

@@ -1,4 +1,4 @@
-import { Box, Typography } from "@mui/material";
+import { Box, Grid, Typography } from "@mui/material";
 import Layout from "../components/layouts/Layout";
 import Tarjeta from "../components/ui/Tarjeta";
 import TarjetaRecommend from "../components/ui/TarjetaRecommend";
@@ -17,13 +17,13 @@ export default function Home() {
         }
       </Box>
       <Typography variant="h5">Recommend for you</Typography>
-      <Box sx={{marginTop:3, display:"flex", flexDirection:"column", gap:5, width:"100%"}}>
+      <Grid container sx={{marginTop:3, display:"flex", flexDirection:"row", width:"initial", justifyContent:"center", boxSizing:"border-box"}} spacing={2}>
          {
           data.map(el => (
             !el.isTrending ? <TarjetaRecommend key={el.title} el={el} /> : ""
           ))
         }
-      </Box>
+      </Grid>
     </Layout>
   )
 }

@@ -1,4 +1,3 @@
-import { Box } from '@mui/material'
 import Head from "next/head"
 import React from 'react'
 import Navbar from '../ui/Navbar'
@@ -7,12 +6,12 @@ import Buscador from '../ui/Buscador'
 const Layout = ({title="OpenJira - App", children}) => {
   return (
     <>
-        <Head>
+        <Head lang="es">
             <title>{title}</title>
         </Head>
         <Navbar />
         <Buscador />
-        <main style={{padding:"16px"}} >
+        <main style={{width:"95%", margin:"10px auto"}} >
           {children}
         </main>
     </>
