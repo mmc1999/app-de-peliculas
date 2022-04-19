@@ -123,19 +123,19 @@ const Navbar = () => {
         </AppBar>
     </Hidden>
     <Hidden lgDown={true}>
-        <AppBar position="fixed" color="primary" elevation={0} sx={{display:"flex", padding:"5px 3px", width:"70px", borderRadius:5, left:30, top:"24px", alignItems:"center", height:"90vh", justifyContent: "space-around"}}>
-            <Toolbar >
-                <Grid container spacing={0} sx={{display:"flex",flexDirection:"column"}}>
-                    <Grid item xl={3} sx={{marginTop:0.4}}>
+        <AppBar position="fixed" color="primary" elevation={0} sx={{width:80, height:"90vh", left:20, marginTop:5, borderRadius:5}}>
+            <Toolbar sx={{height: "100%"}}>
+                <Grid container spacing={0} justifyContent="center" alignItems="center" sx={{height: "100%"}}>
+                    <Grid item  sx={{marginTop:0.4}}>
                         <IconButton >
-                            <MovieIcon color="error"  sx={{fontSize:"50px"}} />
+                            <MovieIcon color="error"  sx={{fontSize:"40px"}} />
                         </IconButton>
                     </Grid>
-                    <Grid item xl={7}>
-                            <List sx={{display:"flex", flexDirection:"column",  alignItems:"center" , height: "100%", justifyContent: "space-around"}} >
+                    <Grid item >
+                            <List sx={{display:"flex", flexDirection:"column", gap:2}}>
                                 <ListItem >
                                     <NextLink href="/" passHref>
-                                        <Link  variant="button" >
+                                        <Link  variant="button">
                                             <IconButton >
                                                 <WidgetsIcon fontSize='large' color="disabled" />
                                             </IconButton>
@@ -161,7 +161,7 @@ const Navbar = () => {
                                     </NextLink>
                                 </ListItem>
                                 <ListItem>
-                                    <NextLink href="/favoritas" passHref>
+                                    <NextLink  href="/favoritas" passHref>
                                         <Link variant='button'>
                                             <IconButton>
                                                 <BookmarkIcon  fontSize='large'  color="disabled" />
@@ -171,7 +171,7 @@ const Navbar = () => {
                                 </ListItem>
                             </List>
                     </Grid>
-                    <Grid item xl={1} sx={{display:"flex", flexDirection:"column",  alignItems:"center"}}>
+                    <Grid item >
                         <Avatar src="/assets/image-avatar.png" alt="Imagen del avatar"  />
                     </Grid>
                 </Grid>
